@@ -28,6 +28,9 @@ public class Colour {
 
         this.model = "RGB";
     }
+    public String getModel(){
+        return this.model;
+    }
     public int getRed(){
         return this.red;
     }
@@ -47,7 +50,14 @@ public class Colour {
         }else{
             return true;
         }
+
     }
 
 
+    public boolean satisfiesRGBDefault() {
+        if(this.getModel().toUpperCase() == "RGB"){
+         return true;
+        }else{
+        return false;}
+    }
 }

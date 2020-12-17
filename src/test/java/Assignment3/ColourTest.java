@@ -20,6 +20,6 @@ class ColourTest {
     @Test
     public void acceptIfDefaultModelIsRGB(){
         Colour colour1 = new Colour(40, 80,90);
-        assertFalse(colour1.satisfiesRequirements(), "Not RGB by default");
+        colour1.satisfiesRGBDefault();
     }
 }
