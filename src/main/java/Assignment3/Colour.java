@@ -101,7 +101,15 @@ public class Colour {
         }
     }
 
-    public boolean add(Colour colour2) {
-        return false;
+    public Colour add(Colour colour2) {
+        if (this.model.toUpperCase() != colour2.model.toUpperCase()){
+            throw new AssertionError("Can't add two different Colour types");
+        }else{
+            model = this.model;
+            red = this.red + colour2.red;
+            green = this.green + colour2.green;
+            blue = this.blue + colour2.blue;}
+        return new Colour(red, green, blue, model);
+
     }
 }

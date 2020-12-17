@@ -46,6 +46,6 @@ class ColourTest {
     public void acceptIfColoursCanBeAdded(){
         Colour colour1 = new Colour(40, 50, -90);
         Colour colour2 = new Colour(40, 50, -90, "CYMK");
-        assertTrue(colour1.add(colour2), "can't add colours");
+        colour1.add(colour2);
     }
 }
