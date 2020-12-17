@@ -40,6 +40,6 @@ class ColourTest {
     public void acceptIfComparisonCanBeMade(){
         Colour colour1 = new Colour(40, 50, -90);
         Colour colour2 = new Colour(40, 50, -90, "CYMK");
-        assertTrue(colour1.comparison(colour2), "not same model type");
+        assertFalse(colour1.comparison(colour2), "not same model type");
     }
 }
