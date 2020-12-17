@@ -81,4 +81,8 @@ public class Colour {
         }else{
         return false;}
     }
+
+    public boolean comparison(Colour colour2) {
+        return true;
+    }
 }
