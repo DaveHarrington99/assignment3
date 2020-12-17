@@ -14,6 +14,6 @@ class ColourTest {
     @Test
     public void acceptIfObjectMeetsBoundaryRequirements(){
         Colour colour1 = new Colour(40, 80, -90);
-        assertFalse(colour1.satisfiesRequirements());
+        assertTrue(colour1.satisfiesRequirements(), "parameter values outside range");
     }
 }

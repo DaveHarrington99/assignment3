@@ -22,7 +22,15 @@ public class Colour {
         return this.blue;
     }
     public boolean satisfiesRequirements() {
-        return true;
+        if(this.getRed()>255 || this.getRed() < 0){
+            return false;
+        }else if(this.getGreen() > 255 || this.getGreen() < 0){
+            return false;
+        }else if(this.getBlue() > 255 || this.getBlue() < 0){
+            return false;
+        }else{
+            return true;
+        }
     }
 
 
