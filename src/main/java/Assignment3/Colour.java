@@ -145,11 +145,8 @@ public class Colour {
             throw new AssertionError("Can't add two different Colour types");
         }else{
             model = this.model;
-            red = this.red + colour2.red;
-            green = this.green + colour2.green;
-            blue = this.blue + colour2.blue;}
-        return new Colour(red, green, blue, model);
-
+            return new Colour(this.getRed() + colour2.getRed(), this.getGreen() + colour2.getGreen(),
+                    this.getBlue() + colour2.getBlue());}
     }
     /**
      *
