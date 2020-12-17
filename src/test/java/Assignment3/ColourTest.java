@@ -42,4 +42,10 @@ class ColourTest {
         Colour colour2 = new Colour(40, 50, -90, "CYMK");
         assertFalse(colour1.comparison(colour2), "not same model type");
     }
+    @Test
+    public void acceptIfColoursCanBeAdded(){
+        Colour colour1 = new Colour(40, 50, -90);
+        Colour colour2 = new Colour(40, 50, -90, "CYMK");
+        assertTrue(colour1.add(colour2), "can't add colours");
+    }
 }

@@ -100,4 +100,8 @@ public class Colour {
             return comparison;
         }
     }
+
+    public boolean add(Colour colour2) {
+        return false;
+    }
 }
