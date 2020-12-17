@@ -28,6 +28,27 @@ public class Colour {
 
         this.model = "RGB";
     }
+    public Colour(int r, int g, int b, String type){
+        this.model = type;
+        if(r > 255){
+            this.red = 255;}
+        else if(r < 0){
+            this.red = 0;
+        }else{this.red = r;}
+
+
+        if(g > 255){
+            this.green = 255;
+        }else if(g < 0){
+            this.green = 0;
+        }else{this.green = g;}
+
+        if(b > 255){
+            this.blue = 255;
+        }else if(b < 0){
+            this.blue = 0;
+        }else{this.blue = b;}
+    }
     public String getModel(){
         return this.model;
     }

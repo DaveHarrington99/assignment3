@@ -25,7 +25,7 @@ class ColourTest {
 
     @Test
     public void acceptIfModelNotRGB(){
-        Colour colour1 = new Colour(40,50,60);
+        Colour colour1 = new Colour(40,50,60, "CYMK");
         assertFalse(colour1.satisfiesRGBDefault(), "is a RGB model");
     }
 }
