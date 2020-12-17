@@ -33,6 +33,13 @@ class ColourTest {
     public void acceptIfComparisonIsTrue(){
         Colour colour1 = new Colour(40, 50, -90, "CYMK");
         Colour colour2 = new Colour(20, 12, 30);
-        assertFalse(colour1.comparison(colour2), "colour aren't the same");
+        colour1.comparison(colour2);
+    }
+
+    @Test
+    public void acceptIfComparisonCanBeMade(){
+        Colour colour1 = new Colour(40, 50, -90);
+        Colour colour2 = new Colour(40, 50, -90, "CYMK");
+        assertTrue(colour1.comparison(colour2), "not same model type");
     }
 }
