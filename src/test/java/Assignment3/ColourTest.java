@@ -22,4 +22,10 @@ class ColourTest {
         Colour colour1 = new Colour(40, 80,90);
         colour1.satisfiesRGBDefault();
     }
+
+    @Test
+    public void acceptIfModelNotRGB(){
+        Colour colour1 = new Colour(40,50,60);
+        assertFalse(colour1.satisfiesRGBDefault(), "is a RGB model");
+    }
 }
