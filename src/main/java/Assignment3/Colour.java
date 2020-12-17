@@ -83,6 +83,21 @@ public class Colour {
     }
 
     public boolean comparison(Colour colour2) {
-        return true;
+        boolean comparison = true;
+        if (this.getModel().toUpperCase() != colour2.getModel().toUpperCase()){
+            comparison = false;
+            return comparison;
+        }else if (this.getRed() != colour2.getRed()){
+            comparison = false;
+            return comparison;
+        }else if(this.getGreen() != colour2.getGreen()){
+            comparison = false;
+            return comparison;}
+        else if (this.getBlue() != colour2.getBlue()){
+            comparison=false;
+            return comparison;
+        }else{
+            return comparison;
+        }
     }
 }
