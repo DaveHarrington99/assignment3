@@ -48,4 +48,5 @@ class ColourTest {
         Colour colour2 = new Colour(40, 50, -90, "CYMK");
         colour1.add(colour2);
     }
+
 }

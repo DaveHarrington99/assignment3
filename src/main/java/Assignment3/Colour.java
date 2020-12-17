@@ -49,18 +49,44 @@ public class Colour {
             this.blue = 0;
         }else{this.blue = b;}
     }
+    /**
+     *
+     * @return model type of the colour
+     */
     public String getModel(){
         return this.model;
     }
+
+    /**
+     *
+     * @return red value of the colour
+     */
     public int getRed(){
         return this.red;
     }
+
+    /**
+     *
+     * @return green value of the colour
+     */
     public int getGreen(){
         return this.green;
     }
+
+    /**
+     *
+     * @return blue value of the colour
+     */
     public int getBlue(){
         return this.blue;
     }
+
+
+    /**
+     * see whether or not created colour satisfies boundary conditions
+     *
+     * @return true if satisfies boundary conditions; false otherwise
+     */
     public boolean satisfiesRequirements() {
         if(this.getRed()>255 || this.getRed() < 0){
             return false;
@@ -74,14 +100,22 @@ public class Colour {
 
     }
 
-
+    /**
+     *
+     * @return boolean whether or not default model type is RGB
+     */
     public boolean satisfiesRGBDefault() {
         if(this.getModel().toUpperCase() == "RGB"){
          return true;
         }else{
         return false;}
     }
-
+    /**
+     * compares whether two colour objects are exactly the same or not
+     *
+     * @param colour2 another colour object to compare it to
+     * @return boolean as to whether two colour objects are the same
+     */
     public boolean comparison(Colour colour2) {
         boolean comparison = true;
         if (this.getModel().toUpperCase() != colour2.getModel().toUpperCase()){
@@ -100,7 +134,12 @@ public class Colour {
             return comparison;
         }
     }
-
+    /**
+     * add colour parameters of two different colours of the same type
+     *
+     * @param colour2 another colour object
+     * @return new colour object which is a result of the addition of the two other colour objects
+     */
     public Colour add(Colour colour2) {
         if (this.model.toUpperCase() != colour2.model.toUpperCase()){
             throw new AssertionError("Can't add two different Colour types");
@@ -111,5 +150,16 @@ public class Colour {
             blue = this.blue + colour2.blue;}
         return new Colour(red, green, blue, model);
 
+    }
+    /**
+     *
+     * @return string format of a colour object split up into its individual parameters
+     */
+    @Override
+    public String toString() {
+        return "Red: " + this.getRed() +"\n"+
+                "Green: " + this.getGreen() + "\n"+
+                "Blue: " + this.getBlue() + "\n" +
+                "Type: " + this.getModel() + "\n";
     }
 }
